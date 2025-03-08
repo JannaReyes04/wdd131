@@ -3,45 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 – Dynamic Web Fundamentals - Janna Reyes</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals/Janna Ryes">
-    <meta name="author" content="Janna Reyes">
+    <title>WDD 131 – Dynamic Web Fundamentals - Mhel Janna Marie Reyes</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Mhel Janna Marie Reyes - Web page about me">
+    <meta name="author" content="Mhel Janna Marie Reyes">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <head>
-        <h1></h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Mhel Janna Marie Reyes</span></h1>
         <nav>
-            <a href="www.linkind">Linkedln</a>
-            <a href="#">Canvas</a>
-            <a href="#">Scripture</a>
-            <a href="#">Final Project</a>  
+            <ul>
+                <li><a href="http://www.linkedin.com/in/mjmreyes" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/123?lang=eng&id=p17#p17" target="_blank">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
         </nav>
-    </head>
+    </header>
+    
     <main>
-        <section class="card">
-            <h2>About me</h2>
-            <img scr="myProfile.jpg" alt="my pic">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ab vero, voluptate ad, molestias odit minima dolorem eius voluptas, provident et. Ratione, dolor ex eum veritatis aliquam voluptates incidunt laudantium.</p>
+        <Div class="cards-container">
+            <section class="card about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>My name is Mhel Janna Marie Reyes. I was born in the Philippines. I currently work as a public teacher. I have 2 daughters, and I love them very much. I love reading books and watching interesting movies and series.</p>
+                    <img src="images/profile.png" alt="Mhel Janna Marie Reyes">
+                </div>
+                <h3>Philippines</h3>
+                <div class="location">
+                    <img src="images/philippinesFlag.gif" alt="Official Flag of Madagascar">
+                    <p>The Philippines is an archipelago in Southeast Asia consisting of over 7,600 islands, known for its diverse culture, rich history, and stunning natural landscapes. It has a tropical climate, beautiful beaches, and vibrant cities like Manila and Cebu. The country boasts a mix of indigenous, Spanish, American, and Asian influences, shaping its language, cuisine, and traditions.</p>
+                </div>
+            </section>
             
-            <h2>Valenzuela, Philippines</h2>
-            <img scr="philippineflag.jpg" alt="philippine flag">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur eius magnam vitae quos hic natus aperiam nisi, odio dolores. Soluta ut, iure ducimus aliquam saepe ullam veniam possimus cupiditate?</p>
-        </section>
-        <section class="card">
-            <h2>Web Dev Resources</h2>
-            
-
-        </section>
+            <section class="card resources">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Smashing Magazine</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                    <li><a href="#">W3 Schools</a></li>
+                    <li><a href="#">Udemy</a></li>
+                    <li><a href="#">Image Placeholder</a></li>
+                </ul>
+            </section>
+        </Div>
     </main>
+    
     <footer>
-        <p>
-            <span id="currentyear">2025 Janna Reyes Philippines</span>
-        </p>
-        <p>
-            <span id="lastModifide"></span>
-        </p>
-
+        <p>&copy; <span id="currentyear"></span> 🌸 Mhel Janna Marie Reyes 🌸 Valenzuela Philippines</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
-
