@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger menu functionality
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
-            const isOpen = navMenu.style.display === 'block';
-            navMenu.style.display = isOpen ? 'none' : 'block';
-            hamburger.textContent = isOpen ? '☰' : '✖';
+            navMenu.classList.toggle('open');
+            hamburger.textContent = navMenu.classList.contains('open') ? '✖' : '☰';
         });
+        
     }
 });
