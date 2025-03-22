@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <!-- CSS links for mobile-first design -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
+    <!-- JavaScript file -->
+    <script src="scripts/temples.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;1,100&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Temple Album</h1>
+            <button id="hamburger" aria-label="Toggle navigation">☰</button>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="old.html">Old</a></li>
+                <li><a href="new.html">New</a></li>
+                <li><a href="large.html">Large</a></li>
+                <li><a href="small.html">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Temple Collection</h1>
+        <section id="gallery">
+            <figure>
+                <img class="hover" src="images/manila.jpg" alt="Manila Philippines Temple">
+                <figcaption>Manila Philippines Temple</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/cebu.jpg" alt="Cebu Philippines Temple">
+                <figcaption>Cebu Philippines Temple</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/urdaneta.jpg" alt="Urdaneta Philippines Temple">
+                <figcaption>Urdaneta Philippines Temple</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/alabang.jpg" alt="Alabang Philippines Temple">
+                <figcaption>Alabang Philippines Temple</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/davao.jpg" alt="Davao Philippines Temple">
+                <figcaption>Davao Philippines Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bacolod.jpg" alt="Bacolod Philippines Temple">
+                <figcaption>Bacolod Philippines Temple</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/cdo.jpg" alt="Cagayan De Oro Philippines Temple">
+                <figcaption>Cagayan De Oro Philippines Temple</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/tacloban.jpg" alt="Tacloban Philippines Temple">
+                <figcaption>Tacloban Philippines Temple</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/tuguegarao.jpg" alt="Tuguegarao Philippines Temple">
+                <figcaption>Tuguegarao Philippines Temple</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🌸 Mhel Janna Marie Reyes 🌸 Valenzuela Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
