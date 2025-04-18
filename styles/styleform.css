@@ -1,108 +1,110 @@
-body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+/* Wide Screen Styles */
+@media (min-width: 1200px) {
+    .review-container {
+        max-width: 800px; /* Adjust as needed for your wide layout */
+        padding: 40px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    label {
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+
+    select,
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    .rating-options {
+        gap: 15px;
+    }
+
+    .rating-options label {
+        font-size: 1.1em;
+    }
+
+    .features-options label {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    button {
+        font-size: 1.2em;
+        padding: 15px 25px;
+    }
+
+    .footer {
+        margin-top: 25px;
+        font-size: 1em;
+    }
 }
 
-.review-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 400px;
+/* Optional: Adjust the overall body layout for wider screens */
+@media (min-width: 1400px) {
+    body {
+        /* You might want to further adjust the centering or background */
+        /* For example, if you have other elements on the page */
+    }
 }
 
-h2 {
-    color: #800080; /* Example purple color */
-    text-align: center;
-    margin-bottom: 20px;
-}
+/* Mobile View Styles */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
 
-.form-group {
-    margin-bottom: 20px;
-}
+    .review-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    font-weight: bold;
-}
+    .form-group {
+        margin-bottom: 15px;
+    }
 
-select,
-input[type="text"],
-input[type="date"],
-textarea {
-    width: calc(100% - 12px);
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
+    label {
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
 
-select {
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: center;
-    padding-right: 30px;
-}
+    select,
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        font-size: 1em;
+        padding: 10px;
+    }
 
-.rating-options {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
+    .rating-options {
+        flex-direction: column; /* Stack rating options on smaller screens */
+        align-items: flex-start;
+        gap: 5px;
+    }
 
-.rating-options label {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-weight: normal;
-}
+    .rating-options label {
+        margin-bottom: 5px;
+    }
 
-.rating-options input[type="radio"] {
-    margin: 0;
-}
+    .features-options label {
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
 
-.features-options label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: normal;
-}
+    button {
+        font-size: 1.1em;
+        padding: 12px 20px;
+    }
 
-.features-options input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-textarea {
-    min-height: 100px;
-}
-
-button {
-    background-color: #800080; /* Example purple color */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #660066; /* Darker purple on hover */
-}
-
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #777;
-    font-size: 0.9em;
+    .footer {
+        margin-top: 15px;
+        font-size: 0.85em;
+    }
 }
