@@ -16,7 +16,7 @@ body {
 
 /* Header */
 .main-header {
-    background-color: #0047ab; /* Deeper blue, like the Church's */
+    background-color: rgb(9, 3, 97);; /* Deeper blue, like the Church's */
     color: white;
     padding: 1em 0;
 }
@@ -72,6 +72,7 @@ body {
     padding: 100px 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    height: 500px;
     overflow: hidden;
     z-index: 0; /* Ensure hero-section is a stacking context */
 }
@@ -84,6 +85,7 @@ body {
     height: 100%;
     background-image: url('../images/chapel.jpg');
     background-size: cover;
+    background-position: center; /* Change this line */
     opacity: 0.5; /* Or your desired opacity */
     z-index: -1; /* Place behind other elements in hero-section */
 }
@@ -95,8 +97,9 @@ body {
 
 .hero-content h1,
 .hero-content .lead {
-    color: white;
+    color: rgb(9, 3, 97);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.3em;
 }
 
 #highlight-section {
@@ -152,20 +155,18 @@ body {
     overflow: hidden; /* Clip the slider to its container */
 }
 
-.image-slider img {
-    /* width: 100%; /* Remove this line to allow resizing */
-    max-width: 600px; /* Adjust this value to your desired medium width */
-    height: auto; /* Maintain aspect ratio */
-    flex-shrink: 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; /* Add some spacing between images if they don't fill the container */
-}
-
 .image-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    /* Adjust width calculation in JS if needed based on max-width and margins */
+}
+
+.image-slider img {
+    /* Remove or adjust max-width if present */
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Remove or adjust margin-right */
 }
 
 /* Optional: Add navigation buttons */
@@ -254,7 +255,7 @@ body {
 
 .contact-card a.button {
     display: inline-block;
-    background-color: #007bff; /* Standard blue button */
+    background-color: rgb(9, 3, 97);; /* Standard blue button */
     color: white;
     padding: 10px 15px;
     text-decoration: none;
@@ -322,3 +323,116 @@ body {
     width: 100%;
 }
 
+.slider-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-navigation button {
+    padding: 8px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.slider-navigation button:hover {
+    background-color: #eee;
+}
+
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    margin-bottom: 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button.primary {
+    background-color: #28a745;
+}
+
+.button.primary:hover {
+    background-color: #1e7e34;
+}
+
+#suggestion-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#suggestion-form input[type="text"],
+#suggestion-form input[type="email"],
+#suggestion-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#suggestion-form button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#form-response {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Adjust grid layout */
+.contact-options {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.contact-options > *:nth-child(3) { /* Target the "Send Us a Message" card (now the 3rd) */
+    grid-column: 2 / -1; /* Span from the second column to the end */
+    grid-row: 1 / 3;     /* Span two rows */
+}

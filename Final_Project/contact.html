@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Meycauayan 2nd Ward</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/contact.css">
 </head>
 <body>
     <div class="site-container">
         <header class="main-header">
             <div class="header-content">
-                <a href="index.html" class="logo">Meycauayan 2nd Ward</a>
+                <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                    <img src="images/christus.png" alt="Christus Symbol" style="height: 2.5em; margin-right: 10px;">
+                    Meycauayan 2nd Ward
+                </a>
                 <nav class="main-nav">
                     <ul class="nav-list">
                         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -31,17 +35,21 @@
                         <h3>Official Church Website</h3>
                         <p>Explore global resources and information:</p>
                         <a href="https://www.churchofjesuschrist.org/" target="_blank" class="button">Visit churchofjesuschrist.org</a>
+                        <p>Connect with our ward community on Facebook:</p>
+                        <a href="https://www.facebook.com/profile.php?id=61571084724914" target="_blank" class="button facebook-page">Meycauayan 2nd Ward Facebook Page</a>
                     </section>
 
                     <section class="contact-card">
                         <h3>Connect with Missionaries</h3>
                         <p>Learn more about the gospel of Jesus Christ:</p>
                         <a href="https://www.comeuntochrist.org/missionaries" target="_blank" class="button">Contact the Missionaries</a>
+                        <p>Or message the local missionaries directly on Facebook:</p>
+                        <a href="https://www.facebook.com/pqcnm.meycauayan2" target="_blank" class="button facebook">Meycauayan 2nd Ward Missionaries</a>
                     </section>
 
                     <section class="contact-card">
                         <h3>Send Us a Message</h3>
-                        <form id="suggestion-form">
+                        <form id="suggestion-form" action="mailto:nephi.reyes@gmail.com" method="post" enctype="text/plain">
                             <div>
                                 <label for="name">Name (Optional):</label>
                                 <input type="text" id="name" name="name">
@@ -56,13 +64,10 @@
                             </div>
                             <button type="submit" class="button primary">Submit</button>
                             <p id="form-response" style="display:none;"></p>
-                        </form>
-                    </section>
-
-                    <section class="contact-card">
+                        </form><br><br>
+                        <p>For urgent matters:</p>
                         <h3>Bishop's Contact</h3>
-                        <p>For urgent pastoral matters:</p>
-                        <p>Phone: <a href="tel:[Insert Bishop's Phone Number Here]">[Insert Bishop's Phone Number Here]</a></p>
+                        <p>Phone: <a href="tel:+639564661070">+639564661070</a></p>
                         <p class="note">(Please use respectfully and for important needs.)</p>
                     </section>
                 </div>
@@ -70,9 +75,10 @@
         </main>
 
         <footer class="main-footer">
-            <p>&copy; 2025 Meycauayan 2nd Ward</p>
+            <p>&copy; <span id="currentyear"></span> 🌸 Mhel Janna Marie Reyes 🌸 Valenzuela Philippines</p>
+            <p id="lastModified"></p>
         </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
