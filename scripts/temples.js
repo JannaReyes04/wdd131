@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('open');
             hamburger.textContent = navMenu.classList.contains('open') ? '✖' : '☰';
         });
-        
+
     }
 });
+
