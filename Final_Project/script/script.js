@@ -92,5 +92,51 @@ function getEventTitle(year, month, day) {
     return event ? event.title : '';
 }
 
+const sliderContainer = document.querySelector('.image-slider-container');
+const imageSlider = document.querySelector('.image-slider');
+const images = document.querySelectorAll('.image-slider img');
+
+let counter = 0;
+const slideWidth = sliderContainer.offsetWidth; // Get the width of the container
+
+// Set the width of the image slider to accommodate all images
+imageSlider.style.width = `${slideWidth * images.length}px`;
+
+function slideTo(index) {
+    imageSlider.style.transform = `translateX(-${slideWidth * index}px)`;
+}
+
+function nextSlide() {
+    counter++;
+    if (counter >= images.length) {
+        counter = 0; // Loop back to the first image
+    }
+    slideTo(counter);
+}
+
+// Automatic sliding (change image every 3 seconds, for example)
+setInterval(nextSlide, 3000);
+
+// Optional: Add navigation buttons in HTML and their functionality in JS
+// const prevButton = document.createElement('button');
+// prevButton.textContent = '<';
+// prevButton.addEventListener('click', () => {
+//     counter--;
+//     if (counter < 0) {
+//         counter = images.length - 1; // Loop to the last image
+//     }
+//     slideTo(counter);
+// });
+
+// const nextButton = document.createElement('button');
+// nextButton.textContent = '>';
+// nextButton.addEventListener('click', nextSlide);
+
+// const sliderNav = document.createElement('div');
+// sliderNav.classList.add('slider-nav');
+// sliderNav.appendChild(prevButton);
+// sliderNav.appendChild(nextButton);
+// sliderContainer.parentNode.appendChild(sliderNav);
+
 // Call renderCalendar again if you want to highlight initial events
 renderCalendar();
