@@ -1,38 +1,40 @@
-/* Base Styles (Keep these) */
+/* Base Styles (No Box) */
 body {
     font-family: sans-serif;
     background-color: #f4f4f4;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack content for potential additional elements */
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    padding: 20px; /* Add some overall padding */
+    box-sizing: border-box; /* Ensure padding is within the viewport */
 }
 
 .review-container {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px; /* Adjust padding */
     border-radius: 8px;
-    /* Remove the box shadow */
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-    width: 400px;
+    width: 95%; /* Make it responsive by default */
+    max-width: 600px; /* Limit maximum width for readability on larger mobile devices */
 }
 
 h2 {
     color: #800080; /* Example purple color */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Adjust margin */
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Adjust margin */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px; /* Adjust margin */
     color: #555;
     font-weight: bold;
+    font-size: 0.95em; /* Adjust font size */
 }
 
 select,
@@ -40,11 +42,11 @@ input[type="text"],
 input[type="date"],
 textarea {
     width: calc(100% - 12px);
-    padding: 8px;
+    padding: 10px; /* Adjust padding */
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 0.95em; /* Adjust font size */
 }
 
 select {
@@ -58,15 +60,16 @@ select {
 
 .rating-options {
     display: flex;
-    gap: 10px;
+    gap: 8px; /* Adjust gap */
     align-items: center;
 }
 
 .rating-options label {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 3px; /* Adjust gap */
     font-weight: normal;
+    font-size: 0.9em; /* Adjust font size */
 }
 
 .rating-options input[type="radio"] {
@@ -75,8 +78,9 @@ select {
 
 .features-options label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px; /* Adjust margin */
     font-weight: normal;
+    font-size: 0.9em; /* Adjust font size */
 }
 
 .features-options input[type="checkbox"] {
@@ -84,17 +88,18 @@ select {
 }
 
 textarea {
-    min-height: 100px;
+    min-height: 80px; /* Adjust min-height */
+    font-size: 0.95em; /* Adjust font size */
 }
 
 button {
     background-color: #800080; /* Example purple color */
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Adjust padding */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1em; /* Adjust font size */
     width: 100%;
 }
 
@@ -104,84 +109,76 @@ button:hover {
 
 .footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px; /* Adjust margin */
     color: #777;
-    font-size: 0.9em;
+    font-size: 0.8em; /* Adjust font size */
 }
 
-/* Mobile View Styles */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    .review-container {
-        width: 95%;
-        margin: 20px auto;
-        padding: 20px;
-        /* Remove the box shadow */
-        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-    }
-
-    .form-group {
-        margin-bottom: 15px;
+/* Mobile View Styles (Specific adjustments for smaller screens) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
     }
 
     label {
-        font-size: 1em;
-        margin-bottom: 3px;
+        font-size: 0.9em;
     }
 
     select,
     input[type="text"],
     input[type="date"],
     textarea {
-        font-size: 1em;
-        padding: 10px;
+        font-size: 0.9em;
+        padding: 8px;
     }
 
     .rating-options {
-        flex-direction: column; /* Stack rating options on smaller screens */
+        flex-direction: column;
         align-items: flex-start;
         gap: 5px;
     }
 
     .rating-options label {
-        margin-bottom: 5px;
+        font-size: 0.85em;
+        margin-bottom: 2px;
     }
 
     .features-options label {
-        font-size: 1em;
-        margin-bottom: 3px;
+        font-size: 0.85em;
+        margin-bottom: 2px;
     }
 
     button {
-        font-size: 1.1em;
-        padding: 12px 20px;
+        font-size: 0.95em;
+        padding: 10px 15px;
     }
 
     .footer {
-        margin-top: 15px;
-        font-size: 0.85em;
+        font-size: 0.75em;
+        margin-top: 10px;
     }
 }
 
 /* Wide Screen Styles */
-@media (min-width: 1200px) {
-    .review-container {
-        max-width: 800px; /* Adjust as needed for your wide layout */
+@media (min-width: 1024px) {
+    body {
         padding: 40px;
-        /* Remove the box shadow */
-        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
     }
 
-    .form-group {
-        margin-bottom: 25px;
+    .review-container {
+        max-width: 700px; /* Adjust for desired wider form width */
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
     }
 
     label {
         font-size: 1.1em;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
     }
 
     select,
@@ -193,33 +190,25 @@ button:hover {
     }
 
     .rating-options {
-        gap: 15px;
+        gap: 12px;
     }
 
     .rating-options label {
-        font-size: 1.1em;
+        font-size: 1.05em;
     }
 
     .features-options label {
-        font-size: 1.1em;
+        font-size: 1.05em;
         margin-bottom: 5px;
     }
 
     button {
-        font-size: 1.2em;
+        font-size: 1.15em;
         padding: 15px 25px;
     }
 
     .footer {
-        margin-top: 25px;
-        font-size: 1em;
-    }
-}
-
-/* Optional: Adjust the overall body layout for wider screens */
-@media (min-width: 1400px) {
-    body {
-        /* You might want to further adjust the centering or background */
-        /* For example, if you have other elements on the page */
+        font-size: 0.9em;
+        margin-top: 20px;
     }
 }
