@@ -1,4 +1,6 @@
 /* styles/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 :root {
     --main-bg: #f8f9fa; /* Light gray background */
     --main-text: #343a40; /* Dark gray text */
