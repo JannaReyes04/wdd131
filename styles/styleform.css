@@ -1,7 +1,6 @@
 /* Newsreader Font */
 .newsreader-body { /* Using a specific class for the body with this font */
     font-family: "Newsreader", serif;
-    font-optical-sizing: auto;
     font-weight: 400; /* Example weight */
     font-style: normal;
 }
