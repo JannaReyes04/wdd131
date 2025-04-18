@@ -1,36 +1,40 @@
+/* ... other CSS ... */
+
 .gallery-container {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow images to wrap to the next line if they don't fit */
-    gap: 10px; /* Spacing between images */
-    padding: 20px; /* Add some padding around the gallery */
+    display: grid; /* Use CSS Grid for a more structured layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create responsive columns */
+    gap: 20px; /* Spacing between temple cards */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the gallery */
 }
 
-.gallery-image {
-    width: calc(33.33% - 10px); /* Display images in a 3-column grid (adjust as needed) */
-    height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ccc; /* Optional border */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    margin-bottom: 10px; /* Add some margin below each image */
+.temple-card {
+    background-color: #fff; /* White background for each card */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px;
+    text-align: center;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .gallery-image {
-        width: calc(50% - 10px); /* Display in a 2-column grid on medium screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-image {
-        width: 100%; /* Display images in a single column on small screens */
-    }
-}
-
-.event-gallery {
-    margin-bottom: 30px; /* Spacing between event sections */
-}
-
-.event-gallery h3 {
+.temple-card h3 {
+    margin-top: 0;
     margin-bottom: 10px;
-    color: #333; /* Example heading color */
+    color: #333;
+}
+
+.temple-image {
+    width: 100%; /* Make the image fill the width of the card */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.temple-info {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.temple-info p {
+    margin-bottom: 5px;
 }
