@@ -1,6 +1,14 @@
-/* Base Styles (No Box) */
-body {
-    font-family: sans-serif;
+/* Newsreader Font */
+.newsreader-body { /* Using a specific class for the body with this font */
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Example weight */
+    font-style: normal;
+  }
+  
+  /* Base Styles (No Box) */
+  body {
+    font-family: sans-serif; /* Default sans-serif fallback */
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column; /* Stack content for potential additional elements */
@@ -9,90 +17,95 @@ body {
     margin: 0;
     padding: 20px; /* Add some overall padding */
     box-sizing: border-box; /* Ensure padding is within the viewport */
-}
-
-.review-container {
+  }
+  
+  /* Apply Newsreader font to the body */
+  body.newsreader-body {
+    /* Inherits other body styles */
+  }
+  
+  .review-container {
     background-color: #fff;
     padding: 20px; /* Adjust padding */
     border-radius: 8px;
     width: 95%; /* Make it responsive by default */
     max-width: 600px; /* Limit maximum width for readability on larger mobile devices */
-}
-
-h2 {
+  }
+  
+  h2 {
     color: #800080; /* Example purple color */
     text-align: center;
     margin-bottom: 15px; /* Adjust margin */
-}
-
-.form-group {
+  }
+  
+  .form-group {
     margin-bottom: 15px; /* Adjust margin */
-}
-
-label {
+  }
+  
+  label {
     display: block;
     margin-bottom: 3px; /* Adjust margin */
     color: #555;
     font-weight: bold;
     font-size: 0.95em; /* Adjust font size */
-}
-
-select,
-input[type="text"],
-input[type="date"],
-textarea {
+  }
+  
+  select,
+  input[type="text"],
+  input[type="date"],
+  textarea {
     width: calc(100% - 12px);
     padding: 10px; /* Adjust padding */
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 0.95em; /* Adjust font size */
-}
-
-select {
+  }
+  
+  select {
     appearance: none;
     background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: center;
     padding-right: 30px;
-}
-
-.rating-options {
+  }
+  
+  .rating-options {
     display: flex;
     gap: 8px; /* Adjust gap */
     align-items: center;
-}
-
-.rating-options label {
+  }
+  
+  .rating-options label {
     display: inline-flex;
     align-items: center;
     gap: 3px; /* Adjust gap */
     font-weight: normal;
     font-size: 0.9em; /* Adjust font size */
-}
-
-.rating-options input[type="radio"] {
+  }
+  
+  .rating-options input[type="radio"] {
     margin: 0;
-}
-
-.features-options label {
+  }
+  
+  .features-options label {
     display: block;
     margin-bottom: 3px; /* Adjust margin */
     font-weight: normal;
     font-size: 0.9em; /* Adjust font size */
-}
-
-.features-options input[type="checkbox"] {
+  }
+  
+  .features-options input[type="checkbox"] {
     margin-right: 5px;
-}
-
-textarea {
+  }
+  
+  textarea {
     min-height: 80px; /* Adjust min-height */
     font-size: 0.95em; /* Adjust font size */
-}
-
-button {
+  }
+  
+  button {
     background-color: #800080; /* Example purple color */
     color: white;
     padding: 12px 20px; /* Adjust padding */
@@ -101,114 +114,114 @@ button {
     cursor: pointer;
     font-size: 1em; /* Adjust font size */
     width: 100%;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #660066; /* Darker purple on hover */
-}
-
-.footer {
+  }
+  
+  .footer {
     text-align: center;
     margin-top: 15px; /* Adjust margin */
     color: #777;
     font-size: 0.8em; /* Adjust font size */
-}
-
-/* Mobile View Styles (Specific adjustments for smaller screens) */
-@media (max-width: 480px) {
+  }
+  
+  /* Mobile View Styles (Specific adjustments for smaller screens) */
+  @media (max-width: 480px) {
     h2 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
+      font-size: 1.5em;
+      margin-bottom: 10px;
     }
-
+  
     label {
-        font-size: 0.9em;
+      font-size: 0.9em;
     }
-
+  
     select,
     input[type="text"],
     input[type="date"],
     textarea {
-        font-size: 0.9em;
-        padding: 8px;
+      font-size: 0.9em;
+      padding: 8px;
     }
-
+  
     .rating-options {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
     }
-
+  
     .rating-options label {
-        font-size: 0.85em;
-        margin-bottom: 2px;
+      font-size: 0.85em;
+      margin-bottom: 2px;
     }
-
+  
     .features-options label {
-        font-size: 0.85em;
-        margin-bottom: 2px;
+      font-size: 0.85em;
+      margin-bottom: 2px;
     }
-
+  
     button {
-        font-size: 0.95em;
-        padding: 10px 15px;
+      font-size: 0.95em;
+      padding: 10px 15px;
     }
-
+  
     .footer {
-        font-size: 0.75em;
-        margin-top: 10px;
+      font-size: 0.75em;
+      margin-top: 10px;
     }
-}
-
-/* Wide Screen Styles */
-@media (min-width: 1024px) {
+  }
+  
+  /* Wide Screen Styles */
+  @media (min-width: 1024px) {
     body {
-        padding: 40px;
+      padding: 40px;
     }
-
+  
     .review-container {
-        max-width: 700px; /* Adjust for desired wider form width */
-        padding: 30px;
+      max-width: 700px; /* Adjust for desired wider form width */
+      padding: 30px;
     }
-
+  
     h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
+      font-size: 2em;
+      margin-bottom: 20px;
     }
-
+  
     label {
-        font-size: 1.1em;
-        margin-bottom: 5px;
+      font-size: 1.1em;
+      margin-bottom: 5px;
     }
-
+  
     select,
     input[type="text"],
     input[type="date"],
     textarea {
-        font-size: 1.1em;
-        padding: 12px;
+      font-size: 1.1em;
+      padding: 12px;
     }
-
+  
     .rating-options {
-        gap: 12px;
+      gap: 12px;
     }
-
+  
     .rating-options label {
-        font-size: 1.05em;
+      font-size: 1.05em;
     }
-
+  
     .features-options label {
-        font-size: 1.05em;
-        margin-bottom: 5px;
+      font-size: 1.05em;
+      margin-bottom: 5px;
     }
-
+  
     button {
-        font-size: 1.15em;
-        padding: 15px 25px;
+      font-size: 1.15em;
+      padding: 15px 25px;
     }
-
+  
     .footer {
-        font-size: 0.9em;
-        margin-top: 20px;
+      font-size: 0.9em;
+      margin-top: 20px;
     }
-}
+  }
