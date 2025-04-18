@@ -299,3 +299,14 @@ if (lastModifiedParagraph) {
     lastModifiedParagraph.textContent = `Last Modified: ${formattedDate}`;
 }
 
+// --- Mobile Navigation Toggle ---
+const burgerMenu = document.querySelector('.burger-menu');
+const mainNav = document.querySelector('.main-nav');
+
+if (burgerMenu && mainNav) {
+    burgerMenu.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+        burgerMenu.classList.toggle('open'); // Optional: for burger button animation
+    });
+}
+
