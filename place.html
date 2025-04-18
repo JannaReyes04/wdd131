@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Philippines</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Philippines</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/tarsier-large.jpg" media="(min-width: 900px)">
+                <source srcset="images/tarsier-large.jpg" media="(min-width: 600px)">
+                <img src="images/tarsier-small.jpg" alt="Scenic view of the Philippines">
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>General Information</h2>
+            <p>Area: 300,000 sq km (approximately)</p>
+            <p>Population (2023 estimate): 117.3 million</p>
+            <p>Capital: Manila</p>
+            <p>Official Languages: Filipino, English</p>
+            <p>Currency: Philippine Peso (PHP)</p>
+            <p>Time Zone: UTC+8</p>
+            <p>Calling Code: +63</p>
+            <p>Internet TLD: .ph</p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather <span class="weather-icon"></span></h2>
+            <p>Temperature: <span id="temperature">30</span>°C <span style="font-size: 0.8em;">(Average)</span></p>
+            <p>Humidity: <span id="humidity">75</span>% <span style="font-size: 0.8em;">(Average)</span></p>
+            <p>Wind Speed: <span id="windSpeed">15</span> km/h <span style="font-size: 0.8em;">(Average)</span></p>
+            <p>Conditions: Tropical Climate</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🌸 Mhel Janna Marie Reyes 🌸 Valenzuela Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* styles/styles.css */
+:root {
+    --main-bg: #f8f9fa; /* Light gray background */
+    --main-text: #343a40; /* Dark gray text */
+    --primary-color: #007bff; /* Philippine Blue (adjust as needed) */
+    --secondary-color: #dc3545; /* Philippine Red (adjust as needed) */
+    --accent-color: #ffc107; /* Philippine Yellow/Gold (adjust as needed) */
+    --light-accent: #fff3cd; /* Light Yellow for highlights */
+}
+
+html, body {
+    height: 100%; /* Ensure full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text within elements */
+}
+
+header {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75em;
+}
+
+main {
+    flex-grow: 1; /* Allow main to take up available vertical space */
+    display: flex;
+    flex-direction: column; /* Default to column for mobile */
+    align-items: center; /* Center content within main horizontally */
+    width: 90%;
+    max-width: 1200px; /* Increased max-width for wider content */
+    padding: 20px 0; /* Adjust padding */
+}
+
+.hero {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem; /* Add margin for mobile view */
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.data,
+.weather {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.data h2,
+.weather h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+
+.weather h2 {
+    display: flex; /* For icon alignment */
+    justify-content: center; /* Center text and icon */
+    align-items: center; /* Center text and icon vertically */
+}
+
+.weather h2::after {
+    content: ""; /* Remove the text-based sun icon */
+    display: inline-block;
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    background-image: url("../images/partly_cloudy_icon.png"); /* Replace with your icon path */
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0.5rem; /* Space between text and icon */
+}
+
+.weather p {
+    margin-bottom: 0.75rem;
+}
+
+.weather-icon {
+    display: none; /* Hide the default weather icon span */
+}
+
+footer {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+}
+
+/* Media query for wider screens (900px and above) */
+@media (min-width: 900px) {
+    main {
+        position: relative; /* Make main the positioning context */
+        flex-direction: column; /* Stack image and overlays */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        max-width: 100%; /* Allow main to take full width */
+        padding: 0; /* Remove padding from main */
+    }
+
+    .hero {
+        width: 100%; /* Image takes full width of main */
+        max-width: none; /* Remove max-width restriction */
+        border-radius: 0; /* Remove border radius in full-width view */
+        overflow: hidden;
+        box-shadow: none; /* Remove shadow in full-width view */
+        margin-bottom: 0; /* Remove margin in wider view */
+    }
+
+    .data,
+    .weather {
+        position: absolute; /* Position them absolutely within main */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 250px; /* Adjust width as needed */
+        text-align: center;
+        z-index: 10; /* Ensure they appear on top of the image */
+    }
+
+    .data h2 {
+        background-color: var(--primary-color); /* Use Philippine Blue */
+        color: white;
+        padding: 0.5rem 1.5rem; /* Add left and right padding to fill the width */
+        margin-top: -1.5rem; /* Pull heading up into the box */
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center;
+        font-size: 1.2em; /* Adjust font size as needed */
+    }
+
+    .data {
+        top: 50px; /* Adjust top position */
+        left: 20px; /* Adjust left position */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        padding-top: 1rem; /* Add top padding to create space for the heading */
+        padding-bottom: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 250px; /* Adjust width as needed */
+        text-align: center;
+        z-index: 10; /* Ensure they appear on top of the image */
+    }
+
+    .weather h2 {
+        background-color: var(--primary-color); /* Dark green background for "Weather" heading */
+        color: white;
+        padding: 0.5rem;
+        margin-top: -1.5rem; /* Pull heading up into the box */
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center;
+        font-size: 1.2em; /* Adjust font size as needed */
+        display: flex; /* For icon alignment */
+        justify-content: center; /* Center text and icon */
+        align-items: center; /* Center text and icon vertically */
+    }
+
+    .weather h2::after {
+        content: ""; /* Remove the default content */
+        display: inline-block;
+        width: 24px; /* Adjust size as needed */
+        height: 24px; /* Adjust size as needed */
+        background-image: url("../images/partly_cloudy_icon.png"); /* Replace with your icon path */
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 0.5rem; /* Space between text and icon */
+    }
+
+    .weather {
+        bottom: 20px; /* Adjust bottom position */
+        right: 20px; /* Adjust right position */
+        text-align: center; /* Align weather text to the right */
+    }
+}

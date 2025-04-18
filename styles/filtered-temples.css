@@ -1,0 +1,272 @@
+/* General Styles */
+.barlow-thin {
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.barlow-regular {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.barlow-thin-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+/* Hamburger Menu (Mobile View) */
+#hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    display: block;
+}
+
+/* Navigation Menu Styles */
+#nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Mobile-only styles */
+@media screen and (max-width: 767px) {
+    #nav-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        display: flex;
+    }
+
+    #nav-menu.show {
+        max-height: 500px; /* Arbitrary large enough value */
+    }
+}
+
+#nav-menu li {
+    width: 100%;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 0.75rem;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#nav-menu a:hover {
+    background-color: #777;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    background-color: white;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.temple-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.temple-name {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.temple-location,
+.temple-dedicated,
+.temple-area {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.temple-area {
+    font-style: italic;
+}
+
+.temple-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+/* Larger Screen View */
+@media screen and (min-width: 768px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    .header-container {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin: 0;
+        width: auto;
+        max-height: none; /* Ensure it's fully visible on large screens */
+        overflow: visible; /* Reset overflow */
+    }
+
+    #nav-menu li {
+        width: auto;
+        margin: 0;
+    }
+
+    #nav-menu a {
+        padding: 0.5rem 0.75rem;
+        background-color: transparent;
+        color: white;
+    }
+
+    #nav-menu a:hover {
+        background-color: #555;
+    }
+
+    main {
+        padding: 3rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #gallery {
+        gap: 2rem;
+    }
+
+    .temple-card {
+        padding: 1.5rem;
+    }
+
+    .temple-name {
+        font-size: 1.25rem;
+    }
+
+    .temple-location,
+    .temple-dedicated,
+    .temple-area {
+        font-size: 0.9rem;
+    }
+
+    .temple-card img {
+        max-height: 200px;
+        margin-top: 1rem;
+        margin-bottom: 0.75rem;
+    }
+}
