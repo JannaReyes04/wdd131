@@ -66,22 +66,95 @@ body {
 }
 
 .hero-section {
-    background-color: #e9ecef; /* Light grey for hero */
-    padding: 40px 20px;
+    position: relative; /* Needed for absolute positioning of the background div */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    text-align: center;
+    overflow: hidden;
 }
 
-.hero-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #0047ab;
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/chapel.jpg'); /* Correct path to your image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust this value for the desired opacity */
+    z-index: -1; /* Place the background behind the content */
 }
 
+.hero-content {
+    position: relative; /* Ensure text stays on top */
+}
+
+.hero-content h1,
 .hero-content .lead {
-    font-size: 1.2em;
-    color: #6c757d; /* Slightly darker grey */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#highlight-section {
+    background-color: #f9f9f9; /* Or your preferred background color for this section */
+    color: #333;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Add back the margin to separate sections */
+}
+
+#highlight-section h2 {
+    color: #0047ab;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    background-color: white; /* Or a similar background to the section */
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#highlight-content {
+    background-color: white; /* Or a similar background to the section */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#history-section {
+    background-color: #f9f9f9; /* Or your preferred background color for this section */
+    color: #333;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 20px; /* Add back the margin to separate sections */
+}
+
+#history-section h2 {
+    color: #0047ab;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    background-color: white; /* Or a similar background to the section */
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#history-section > p {
+    background-color: white; /* Or a similar background to the section */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.content-section {
+    background-color: white; /* Set a default background for content sections */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); /* You might want to add a subtle shadow back */
+    border-radius: 8px; /* You might want to add rounded corners back */
+    margin-bottom: 20px; /* Ensure there's margin between all content sections */
+}
+
+.main-content {
+    background-color: #f9f9f9; /* Or your preferred main content background */
 }
 
 .content-section {
