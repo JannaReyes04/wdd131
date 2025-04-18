@@ -7,20 +7,20 @@
     <meta name="author" content="Mhel Janna Marie Reyes">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/styleform.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;1,100&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Special+Gothic&display=swap" rel="stylesheet">
+
     <script src="scripts/form.js" defer></script>
 </head>
 <body>
     <div class="review-container">
-        <h1>Honest Feedback and Ratings</h1>
-        <form method="get" action="review.html">
-        </form>
-        <h2>Product Review</h2>
-        <form>
-            <div class="form-group">
+        <h1>Product Review</h1> <form method="get" action="review.html"> <div class="form-group">
                 <label for="product-name">Product Name</label>
                 <select id="product-name">
                     <option>Choose a Product ...</option>
-                    <option>Violine</option>
+                    <option>Violin</option>
                     <option>Guitar</option>
                     <option>Piano</option>
                 </select>
@@ -66,10 +66,9 @@
         </form>
     </div>
 
-    <div class="footer">
-        <p>©2025 🌸 Mhel JAnna Marie Reyes 🌸</p>
-        <p>Philippines</p>
-        <p>Last Modification: 04/18/2025 15:17:10</p>
-    </div>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🌸 Mhel Janna Marie Reyes 🌸 Valenzuela Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
