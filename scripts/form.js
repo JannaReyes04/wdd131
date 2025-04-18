@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Existing form submission handling (no changes needed here)
     const reviewForm = document.querySelector('form');
     const productNameSelect = document.getElementById('product-name');
     const ratingInputs = document.querySelectorAll('input[name="rating"]');
@@ -9,12 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (reviewForm) {
         reviewForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
 
-            // Get the selected product
             const selectedProduct = productNameSelect.value;
-
-            // Get the selected rating
             let selectedRating = null;
             for (const ratingInput of ratingInputs) {
                 if (ratingInput.checked) {
@@ -22,22 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     break;
                 }
             }
-
-            // Get the selected features
             const selectedFeatures = [];
             for (const featureCheckbox of featuresCheckboxes) {
                 if (featureCheckbox.checked) {
                     selectedFeatures.push(featureCheckbox.value);
                 }
             }
-
-            // Get the written review
             const writtenReview = writtenReviewTextarea.value.trim();
-
-            // Get the user's name
             const yourName = yourNameInput.value.trim();
 
-            // Basic validation (you can add more sophisticated validation)
             if (selectedProduct === "Choose a Product ...") {
                 alert("Please choose a product.");
                 return;
@@ -48,19 +39,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // For demonstration purposes, let's log the collected data
             console.log("Selected Product:", selectedProduct);
             console.log("Overall Rating:", selectedRating);
             console.log("Selected Features:", selectedFeatures);
             console.log("Written Review:", writtenReview);
             console.log("Your Name:", yourName);
 
-            // In a real application, you would send this data to a server
-            // using an AJAX request (e.g., fetch or XMLHttpRequest).
             alert("Review submitted (data logged to console).");
-
-            // Optionally, you can reset the form after submission
             reviewForm.reset();
         });
+    }
+
+    // JavaScript for the footer
+    const currentYearSpan = document.getElementById('currentyear');
+    const lastModifiedParagraph = document.getElementById('lastModified');
+
+    if (currentYearSpan) {
+        const currentYear = new Date().getFullYear();
+        currentYearSpan.textContent = currentYear;
+    }
+
+    if (lastModifiedParagraph) {
+        const lastModifiedDate = new Date(document.lastModified);
+        const formattedDate = lastModifiedDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }); // Short month format
+        const formattedTime = lastModifiedDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false }); // 24-hour format
+        lastModifiedParagraph.textContent = `Last Modification: ${formattedDate.split('/').join('/')} ${formattedTime.replace(':', ':')}`;
     }
 });
