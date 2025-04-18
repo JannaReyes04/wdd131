@@ -7,9 +7,12 @@
     <meta name="author" content="Janna Reyes">
     <title>Philippines</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="scripts/script.js" defer></script>
 </head>
-<body>  
+<body>
     <header>
         <h1>Welcome to the Philippines</h1>
     </header>
@@ -17,8 +20,8 @@
     <main>
         <section class="hero">
             <picture>
-                <source srcset="images/tarsier-large.jpg" media="(min-width: 900px)">
-                <source srcset="images/tarsier-large.jpg" media="(min-width: 600px)">
+                <source srcset="images/tarsier-large.jpg 1200w, images/tarsier-medium.jpg 900w, images/tarsier-small.jpg 600w" media="(min-width: 900px)">
+                <source srcset="images/tarsier-medium.jpg 900w, images/tarsier-small.jpg 600w" media="(min-width: 600px)">
                 <img src="images/tarsier-small.jpg" alt="Scenic view of the Philippines">
             </picture>
         </section>
@@ -36,7 +39,7 @@
         </section>
 
         <section class="weather">
-            <h2>Weather</h2>
+            <h2>Weather <span class="weather-icon"></span></h2>
             <p>Temperature: <span id="temperature">30</span>°C <span style="font-size: 0.8em;">(Average)</span></p>
             <p>Humidity: <span id="humidity">75</span>% <span style="font-size: 0.8em;">(Average)</span></p>
             <p>Wind Speed: <span id="windSpeed">15</span> km/h <span style="font-size: 0.8em;">(Average)</span></p>
