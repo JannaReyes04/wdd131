@@ -1,0 +1,208 @@
+/* Basic Reset and Font */
+body {
+    font-family: 'Open Sans', sans-serif; /* A common, clean font - include via Google Fonts in HTML if needed */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light grey background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.site-container {
+    max-width: 1200px; /* Common max width for websites */
+    margin: 0 auto;
+    padding: 0 20px; /* Add some side padding */
+}
+
+/* Header */
+.main-header {
+    background-color: #0047ab; /* Deeper blue, like the Church's */
+    color: white;
+    padding: 1em 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px; /* Slightly rounded links */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px 0;
+}
+
+.hero-section {
+    background-color: #e9ecef; /* Light grey for hero */
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #0047ab;
+}
+
+.hero-content .lead {
+    font-size: 1.2em;
+    color: #6c757d; /* Slightly darker grey */
+}
+
+.content-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.content-section h2 {
+    color: #0047ab;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Galleries */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Page */
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card h3 {
+    color: #0047ab;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    margin-bottom: 15px;
+}
+
+.contact-card a.button {
+    display: inline-block;
+    background-color: #007bff; /* Standard blue button */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card a.button:hover {
+    background-color: #0056b3;
+}
+
+#suggestion-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#suggestion-form input[type="text"],
+#suggestion-form input[type="email"],
+#suggestion-form textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#suggestion-form textarea {
+    min-height: 100px;
+}
+
+#suggestion-form button.primary {
+    background-color: #28a745; /* Green submit button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#suggestion-form button.primary:hover {
+    background-color: #1e7e34;
+}
+
+.contact-card p.note {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.contact-card h3 + p { /* Style the paragraph after the contact card heading */
+    margin-top: 0;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #343a40; /* Dark grey footer */
+    color: white;
+    position: relative; /* To contain absolute positioned elements if needed */
+    bottom: 0;
+    width: 100%;
+}

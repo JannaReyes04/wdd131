@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Meycauayan 2nd Ward</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="site-container">
+        <header class="main-header">
+            <div class="header-content">
+                <a href="index.html" class="logo">Meycauayan 2nd Ward</a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="calendar.html" class="nav-link">Calendar</a></li>
+                        <li class="nav-item"><a href="galleries.html" class="nav-link">Galleries</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="content-section">
+                <h2>Contact Us</h2>
+
+                <div class="contact-options">
+                    <section class="contact-card">
+                        <h3>Official Church Website</h3>
+                        <p>Explore global resources and information:</p>
+                        <a href="https://www.churchofjesuschrist.org/" target="_blank" class="button">Visit churchofjesuschrist.org</a>
+                    </section>
+
+                    <section class="contact-card">
+                        <h3>Connect with Missionaries</h3>
+                        <p>Learn more about the gospel of Jesus Christ:</p>
+                        <a href="https://www.comeuntochrist.org/missionaries" target="_blank" class="button">Contact the Missionaries</a>
+                    </section>
+
+                    <section class="contact-card">
+                        <h3>Send Us a Message</h3>
+                        <form id="suggestion-form">
+                            <div>
+                                <label for="name">Name (Optional):</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div>
+                                <label for="email">Email (Optional):</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div>
+                                <label for="message">Message/Suggestion:</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="button primary">Submit</button>
+                            <p id="form-response" style="display:none;"></p>
+                        </form>
+                    </section>
+
+                    <section class="contact-card">
+                        <h3>Bishop's Contact</h3>
+                        <p>For urgent pastoral matters:</p>
+                        <p>Phone: <a href="tel:[Insert Bishop's Phone Number Here]">[Insert Bishop's Phone Number Here]</a></p>
+                        <p class="note">(Please use respectfully and for important needs.)</p>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Meycauayan 2nd Ward</p>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

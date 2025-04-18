@@ -1,0 +1,58 @@
+/* Existing styles */
+#ward-calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#ward-calendar th, #ward-calendar td {
+    border: 1px solid #eee;
+    padding: 8px;
+    text-align: center;
+}
+
+#ward-calendar th {
+    font-weight: bold;
+    color: #555;
+}
+
+#ward-calendar td {
+    cursor: default;
+}
+
+#ward-calendar td.event {
+    background-color: #f0f8ff;
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#ward-calendar td.event:hover {
+    background-color: #e0f2f7;
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-controls button {
+    padding: 8px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-controls button:hover {
+    background-color: #eee;
+}
+
+.calendar-controls h3 {
+    margin: 0 20px;
+    color: #333;
+}
