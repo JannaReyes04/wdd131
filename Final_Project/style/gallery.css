@@ -1,0 +1,36 @@
+.gallery-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if they don't fit */
+    gap: 10px; /* Spacing between images */
+    padding: 20px; /* Add some padding around the gallery */
+}
+
+.gallery-image {
+    width: calc(33.33% - 10px); /* Display images in a 3-column grid (adjust as needed) */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Optional border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 10px; /* Add some margin below each image */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .gallery-image {
+        width: calc(50% - 10px); /* Display in a 2-column grid on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-image {
+        width: 100%; /* Display images in a single column on small screens */
+    }
+}
+
+.event-gallery {
+    margin-bottom: 30px; /* Spacing between event sections */
+}
+
+.event-gallery h3 {
+    margin-bottom: 10px;
+    color: #333; /* Example heading color */
+}
