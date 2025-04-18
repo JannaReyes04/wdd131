@@ -32,3 +32,16 @@
     margin-bottom: 5px;
     text-align-last: center;
 }
+
+#gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+figure img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
