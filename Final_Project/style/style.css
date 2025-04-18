@@ -9,7 +9,7 @@ body {
 }
 
 .site-container {
-    max-width: 1200px; /* Common max width for websites */
+    max-width: 95%; /* Common max width for websites */
     margin: 0 auto;
     padding: 0 20px; /* Add some side padding */
 }
@@ -73,6 +73,7 @@ body {
     border-radius: 8px;
     margin-bottom: 20px;
     overflow: hidden;
+    z-index: 0; /* Ensure hero-section is a stacking context */
 }
 
 .hero-background {
@@ -81,15 +82,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/chapel.jpg'); /* Correct path to your image */
+    background-image: url('../images/chapel.jpg');
     background-size: cover;
-    background-position: center;
-    opacity: 0.5; /* Adjust this value for the desired opacity */
-    z-index: -1; /* Place the background behind the content */
+    opacity: 0.5; /* Or your desired opacity */
+    z-index: -1; /* Place behind other elements in hero-section */
 }
 
 .hero-content {
     position: relative; /* Ensure text stays on top */
+    z-index: 1; /* Ensure it's above the background */
 }
 
 .hero-content h1,
@@ -104,6 +105,7 @@ body {
     padding: 40px 20px;
     border-radius: 8px;
     margin-bottom: 20px; /* Add back the margin to separate sections */
+    overflow: hidden;
 }
 
 #highlight-section h2 {
@@ -144,6 +146,46 @@ body {
     background-color: white; /* Or a similar background to the section */
     padding: 15px;
     border-radius: 5px;
+}
+
+.image-slider-container {
+    overflow: hidden; /* Clip the slider to its container */
+}
+
+.image-slider img {
+    /* width: 100%; /* Remove this line to allow resizing */
+    max-width: 600px; /* Adjust this value to your desired medium width */
+    height: auto; /* Maintain aspect ratio */
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add some spacing between images if they don't fill the container */
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Adjust width calculation in JS if needed based on max-width and margins */
+}
+
+/* Optional: Add navigation buttons */
+.slider-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slider-nav button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+}
+
+.slider-nav button:hover {
+    background-color: #eee;
 }
 
 .content-section {
@@ -279,3 +321,4 @@ body {
     bottom: 0;
     width: 100%;
 }
+
